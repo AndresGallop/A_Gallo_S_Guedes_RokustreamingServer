@@ -12,8 +12,10 @@ app.use((req, res, next) => {
     next(); //=> send the user to the route they requested
 })
 
-// use the API route file to handle API routes (api/usres, /api/:user/:id, etc)
+// use the API route file to handle API routes (api/users, /api/:user/:id, etc)
 app.use("/api", require("./routes/api"));
+app.use("/ums", require("./routes/ums"));
+
 
 //run the app at the port
 app.listen(port, () => {

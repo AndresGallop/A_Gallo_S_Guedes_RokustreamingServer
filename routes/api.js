@@ -1,5 +1,5 @@
 const express = require('express');
-const connection = require('../config/sqlConfig');
+//const connection = require('../config/sqlConfig');
 // express router handles incoming requests and deirects them where they need to go
 // like a traffic cop
 const router = express.Router();
@@ -70,114 +70,6 @@ router.get("/movies", (req, res) => {
           res.json(results);
         });
       });
-})
-
-router.get("/moviesHeroImg", (req, res) => {
-  //run a SQL query here to get all the movies from my DB
-  connect.getConnection(function(err, connection) {
-      if (err) throw err; // not connected!
-     
-      // Use the connection
-      connection.query("SELECT * FROM tbl_movies WHERE movies_year >='2017'", function (error, results) {
-        // When done with the connection, release it.
-        connection.release();
-     
-        // Handle error after the release.
-        if (error) throw error;
-
-        res.json(results);
-      });
-    });
-})
-
-router.get("/moviesnineties", (req, res) => {
-  //run a SQL query here to get all the movies from my DB
-  connect.getConnection(function(err, connection) {
-      if (err) throw err; // not connected!
-     
-      // Use the connection
-      connection.query("SELECT * FROM tbl_movies WHERE movies_year >='2017'", function (error, results) {
-        // When done with the connection, release it.
-        connection.release();
-     
-        // Handle error after the release.
-        if (error) throw error;
-
-        res.json(results);
-      });
-    });
-})
-
-router.get("/movieseighties", (req, res) => {
-  //run a SQL query here to get all the movies from my DB
-  connect.getConnection(function(err, connection) {
-      if (err) throw err; // not connected!
-     
-      // Use the connection
-      connection.query("SELECT * FROM tbl_movies WHERE movies_year ='2016'", function (error, results) {
-        // When done with the connection, release it.
-        connection.release();
-     
-        // Handle error after the release.
-        if (error) throw error;
-
-        res.json(results);
-      });
-    });
-})
-
-router.get("/moviesseventies", (req, res) => {
-  //run a SQL query here to get all the movies from my DB
-  connect.getConnection(function(err, connection) {
-      if (err) throw err; // not connected!
-     
-      // Use the connection
-      connection.query("SELECT * FROM tbl_movies WHERE movies_year ='2015'", function (error, results) {
-        // When done with the connection, release it.
-        connection.release();
-     
-        // Handle error after the release.
-        if (error) throw error;
-
-        res.json(results);
-      });
-    });
-})
-
-router.get("/moviessixties", (req, res) => {
-  //run a SQL query here to get all the movies from my DB
-  connect.getConnection(function(err, connection) {
-      if (err) throw err; // not connected!
-     
-      // Use the connection
-      connection.query("SELECT * FROM tbl_movies WHERE movies_year ='2014'", function (error, results) {
-        // When done with the connection, release it.
-        connection.release();
-     
-        // Handle error after the release.
-        if (error) throw error;
-
-        res.json(results);
-      });
-    });
-})
-
-router.get("/moviesfiveties", (req, res) => {
-  //run a SQL query here to get all the movies from my DB
-  connect.getConnection(function(err, connection) {
-      if (err) throw err; // not connected!
-     
-      // Use the connection
-      connection.query("SELECT * FROM tbl_movies WHERE movies_year <='2013'", function (error, results) {
-        // When done with the connection, release it.
-        connection.release();
-     
-        // Handle error after the release.
-        if (error) throw error;
-
-        res.json(results);
-      });
-    });
 })
 
 
