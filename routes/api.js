@@ -89,4 +89,69 @@ router.get("/movies/:id", (req, res) => {
     
 })
 
+router.get("/music", (req, res) => {
+  //run a SQL query here to get all the movies from my DB
+  connect.getConnection(function(err, connection) {
+      if (err) throw err; // not connected!
+     
+      // Use the connection
+      connection.query('SELECT * FROM tbl_music', function (error, results) {
+        // When done with the connection, release it.
+        connection.release();
+     
+        // Handle error after the release.
+        if (error) throw error;
+
+        res.json(results);
+      });
+    });
+})
+
+
+
+router.get("/music/:id", (req, res) => {
+
+  connect.query(`SELECT * FROM tbl_music WHERE music_id=${req.params.id}`, function (error, results, fields) {
+
+      if (error) throw error;
+
+      console.log("results:", results, "fields:", fields);
+      res.json(results);
+    });
+  
+})
+
+
+router.get("/tvshows", (req, res) => {
+  //run a SQL query here to get all the movies from my DB
+  connect.getConnection(function(err, connection) {
+      if (err) throw err; // not connected!
+     
+      // Use the connection
+      connection.query('SELECT * FROM tbl_tvshows', function (error, results) {
+        // When done with the connection, release it.
+        connection.release();
+     
+        // Handle error after the release.
+        if (error) throw error;
+
+        res.json(results);
+      });
+    });
+})
+
+
+
+router.get("/tvshows/:id", (req, res) => {
+
+  connect.query(`SELECT * FROM tbl_tvshows WHERE tvshows_id=${req.params.id}`, function (error, results, fields) {
+
+      if (error) throw error;
+
+      console.log("results:", results, "fields:", fields);
+      res.json(results);
+    });
+  
+})
+
 module.exports = router;

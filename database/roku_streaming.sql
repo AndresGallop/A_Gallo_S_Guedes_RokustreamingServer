@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 15, 2021 at 06:56 AM
+-- Generation Time: Apr 17, 2021 at 03:42 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.4.9
 
@@ -647,42 +647,70 @@ DROP TABLE IF EXISTS `tbl_movies`;
 CREATE TABLE IF NOT EXISTS `tbl_movies` (
   `movies_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
   `movies_cover` varchar(75) NOT NULL DEFAULT 'cover_default.jpg',
-  `movies_heroimg` varchar(75) NOT NULL DEFAULT 'default.jpg',
   `movies_title` varchar(125) NOT NULL,
-  `movies_year` varchar(5) NOT NULL,
-  `movies_runtime` varchar(25) NOT NULL,
+  `movies_era` varchar(5) NOT NULL,
   `movies_storyline` text NOT NULL,
-  `movies_trailer` varchar(75) NOT NULL DEFAULT 'trailer_default.jpg',
+  `movies_trailer` varchar(75) NOT NULL DEFAULT 'trailer_default.mp4',
   `movies_release` varchar(125) NOT NULL,
+  `kids` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`movies_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_movies`
 --
 
-INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_heroimg`, `movies_title`, `movies_year`, `movies_runtime`, `movies_storyline`, `movies_trailer`, `movies_release`) VALUES
-(1, 'guardians2.jpg', 'guardians2.jpg', 'Guardians of the Galaxy Vol. 2', '2017', '2h 16m', 'The Guardians must fight to keep their newfound family together as they unravel the mystery of Peter Quill&rsquo;s true parentage.', 'Guardians2.mp4', 'May 5, 2017'),
-(2, 'dunkirk.jpg', 'dunkirk.jpg', 'Dunkirk', '2017', '1h 46m', 'Allied soldiers from Belgium, the British Empire and France are surrounded by the German army and evacuated during a fierce battle in World War II.', 'Dunkirk.mp4', 'July 21, 2017'),
-(3, 'logan.jpg', 'logan.jpg', 'Logan', '2017', '2h 17m', 'In the near future, a weary Logan cares for an ailing Professor X, somewhere on the Mexican border. However, Logan&rsquo;s attempts to hide from the world, and his legacy, are upended when a young mutant arrives, pursued by dark forces.', 'Logan.mp4', 'March 3,2017'),
-(4, 'okja.jpg', 'okja.jpg', 'Okja', '2017', '2h', ' Meet Mija, a young girl who risks everything to prevent a powerful, multi-national company from kidnapping her best friend - a fascinating animal named Okja. ', 'Okja.mp4', 'June 28,2017'),
-(5, 'beauty.jpg', 'beauty.jpg', 'Beauty and the Beast', '2017', '2h 9min', 'An adaptation of the fairy tale about a monstrous-looking prince and a young woman who fall in love. ', 'Beauty.mp4', 'March 17, 2017'),
-(6, 'hacksaw.jpg', 'default.jpg', 'Hacksaw Ridge', '2016', '2h 19m', 'WWII American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people, and becomes the first man in American history to receive the Medal of Honor without firing a shot.', 'Hacksaw.mp4', 'November 4, 2016'),
-(7, 'deadpool.jpg', 'default.jpg', 'Deadpool', '2016', '1h 48m', 'A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.', 'Deadpool.mp4', 'Febuary 12, 2016'),
-(8, 'arrival.jpg', 'default.jpg', 'Arrival', '2016', '1h 56m', 'When twelve mysterious spacecraft appear around the world, linguistics professor Louise Banks is tasked with interpreting the language of the apparent alien visitors.', 'Arrival.mp4', 'November 11, 2016'),
-(9, 'eddie.jpg', 'default.jpg', 'Eddie the Eagle', '2016', '1h 46m', 'The story of Eddie Edwards, the notoriously tenacious British underdog ski jumper who charmed the world at the 1988 Winter Olympics.', 'Eddie.mp4', 'Febuary 26, 2016'),
-(10, 'trolls.jpg', 'default.jpg', 'Trolls', '2016', '1h 32m', 'After the Bergens invade Troll Village, Poppy, the happiest Troll ever born, and the curmudgeonly Branch set off on a journey to rescue her friends.', 'Trolls.mp4', 'November 4, 2016'),
-(11, 'revenant.jpg', 'default.jpg', 'The Revenant', '2015', '2h 36m', 'A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.', 'Revenant.mp4', 'January 8, 2015'),
-(12, 'brooklyn.jpg', 'default.jpg', 'Brooklyn', '2015', '1h 57m', 'An Irish immigrant lands in 1950s Brooklyn, where she quickly falls into a romance with a local. When her past catches up with her, however, she must choose between two countries and the lives that exist within.', 'Brooklyn.mp4', 'November 25, 2015'),
-(13, 'walk.jpg', 'default.jpg', 'The Walk', '2015', '2h 3m', 'In 1974, high-wire artist Philippe Petit recruits a team of people to help him realize his dream: to walk the immense void between the World Trade Center towers.', 'Walk.mp4', 'October 9, 2015'),
-(14, 'colonia.jpg', 'default.jpg', 'Colonia', '2015', '1h 46m', 'A young woman&rsquo;s desperate search for her abducted boyfriend that draws her into the infamous Colonia Dignidad, a sect nobody has ever escaped from.', 'Colonia.mp4', 'April 15, 2015'),
-(15, 'force.jpg', 'default.jpg', 'Star Wars: The Force Awakens', '2015', '2h 16m', 'Three decades after the Empire&rsquo;s defeat, a new threat arises in the militant First Order. Stormtrooper defector Finn and spare parts scavenger Rey are caught up in the Resistance&rsquo;s search for the missing Luke Skywalker.', 'Force.mp4', 'December 18, 2015'),
-(16, 'whiplash.jpg', 'default.jpg', 'Whiplash', '2014', '1h 47m', 'A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student\'s potential.', 'Whiplash.mp4', 'October 15, 2014'),
-(17, 'guardians.jpg', 'default.jpg', 'Guardians of the Galaxy', '2014', '2h 1m', 'A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.', 'Guardians.mp4', 'August 1, 2014'),
-(18, 'donjon.jpg', 'default.jpg', 'Don Jon', '2013', '1h 30m', 'A New Jersey guy dedicated to his family, friends, and church, develops unrealistic expectations from watching porn and works to find happiness and intimacy with his potential true love.', 'donjon.mp4', 'September 27, 2013'),
-(19, 'gravity.jpg', 'default.jpg', 'Gravity', '2013', '1h 31m', 'Two astronauts work together to survive after an accident which leaves them alone in space.', 'Gravity.mp4', 'October 4, 2013'),
-(20, 'pi.jpg', 'default.jpg', 'Life of Pi', '2012', '2h 7m', 'A young man who survives a disaster at sea is hurtled into an epic journey of adventure and discovery. While cast away, he forms an unexpected connection with another survivor: a fearsome Bengal tiger.', 'Pi.jpg', 'November 21, 2012'),
-(21, 'silver.jpg', 'default.jpg', 'Silver Linings Playbook', '2012', '2h 2m', 'After a stint in a mental institution, former teacher Pat Solitano moves back in with his parents and tries to reconcile with his ex-wife. Things get more challenging when Pat meets Tiffany, a mysterious girl with problems of her own.', 'Silver.jpg', 'December 25, 2012');
+INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_era`, `movies_storyline`, `movies_trailer`, `movies_release`, `kids`) VALUES
+(1, 'PulpFiction.jpg', 'Pulp Fiction', '90s', 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.', 'PulpFiction.mp4', '1994', '1'),
+(2, 'Fargo.jpg', 'Fargo', '90s', 'Jerry Lundegaard\'s inept crime falls apart due to his and his henchmen\'s bungling and the persistent police work of the quite pregnant Marge Gunderson.', 'Fargo.mp4', '1996', '1'),
+(3, 'Terminator2.jpg', 'Terminator 2: Judgment Day', '90s', 'A cyborg, identical to the one who failed to kill Sarah Connor, must now protect her ten year old son, John Connor, from a more advanced and powerful cyborg.', 'Terminator2.mp4', '1991', '1'),
+(4, 'TheSixthSense.jpg', 'The Sixth Sense', '90s', 'A boy who communicates with spirits seeks the help of a disheartened child psychologist. ', 'TheSixthSense.mp4', '1999', '1'),
+(5, 'TheMatrix.jpg', 'The Matrix', '90s', 'When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.', 'TheMatrix.mp4', '1999', '1'),
+(6, 'ToyStory.jpg', 'Toy Story', '90s', 'A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy\'s room.', 'ToyStory.mp4', '1995', NULL),
+(7, 'Mulan.jpg', 'Mulan', '90s', 'To save her father from death in the army, a young maiden secretly goes in his place and becomes one of China\'s greatest heroines in the process.', 'Mulan.mp4', '1998', NULL),
+(8, 'ABugsLife.jpg', 'A Bug\'s Life', '90s', 'A misfit ant, looking for \"warriors\" to save his colony from greedy grasshoppers, recruits a group of bugs that turn out to be an inept circus troupe.', 'ABugsLife.mp4', '1998', NULL),
+(9, 'Aladdin.jpg', 'Aladdin', '90s', 'Aladdin is a poor yet care-free street urchin in an Arabian city. One day he meets Princess Jasmine, the daughter of the Sultan of the land, and falls madly in love. However, the evil Jafar, the Sultan\'s sorcerer, imprisons Aladdin and manipulates him into working for him.', 'Aladdin.mp4', '1992', NULL),
+(10, 'TheLionKing.jpg', 'The Lion King', '90s', 'The Lion King tells the story of Simba, a young lion who is to succeed his father, Mufasa, as King of the Pride Lands; however, after Simba\'s paternal uncle Scar murders Mufasa, Simba is manipulated into thinking he was responsible and flees into exile.', 'TheLionKing.mp4', '1994', NULL),
+(11, 'BatmanMovie.jpg', 'Batman', '80s', 'The Dark Knight of Gotham City begins his war on crime with his first major enemy being Jack Napier, a criminal who becomes the clownishly homicidal Joker.', 'BatmanMovie.mp4', '1989', '1'),
+(12, 'DeadPoetssociety.jpg', 'Dead Poets society', '80s', 'Maverick teacher John Keating uses poetry to embolden his boarding school students to new heights of self-expression.', 'DeadPoetssociety.mp4', '1989', '1'),
+(13, 'TheTerminator.jpg', 'The Terminator', '80s', 'A human soldier is sent from 2029 to 1984 to stop an almost indestructible cyborg killing machine, sent from the same year, which has been programmed to execute a young woman whose unborn son is the key to humanity\'s future salvation.', 'TheTerminator.mp4', '1984', '1'),
+(14, 'Highlander.jpg', 'Highlander', '80s', 'An immortal Scottish swordsman must confront the last of his immortal opponent, a murderously brutal barbarian who lusts for the fabled \"Prize\".', 'Highlander.mp4', '1986', '1'),
+(15, 'TheEvilDead.jpg', 'The Evil Dead', '80s', 'Three decades after the Empire&rsquo;s defeat, a new threat arises in the militant First Order. Stormtrooper defector Finn and spare parts scavenger Rey are caught up in the Resistance&rsquo;s search for the missing Luke Skywalker.', 'TheEvilDead.mp4', '1981', '1'),
+(16, 'CaravanofCourage.jpg', 'Caravan of Courage', '80s', 'Wicket the Ewok and his friends agree to help two shipwrecked human children, Mace and Cindel, on a quest to find their parents.', 'CaravanofCourage.mp4', '1984', NULL),
+(17, 'TheNeverendingStory.jpg', 'The Neverending Story', '80s', 'A troubled boy dives into a wondrous fantasy world through the pages of a mysterious book.', 'TheNeverendingStory.mp4', '1984', NULL),
+(18, 'TheDarkCrystal.jpg', 'The Dark Crystal', '80s', 'On another planet in the distant past, a Gelfling embarks on a quest to find the missing shard of a magical crystal, and so restore order to his world.', 'TheDarkCrystal.mp4', '1982', NULL),
+(19, 'TheGoonies.jpg', 'The Goonies', '80s', 'A group of young misfits called The Goonies discover an ancient map and set out on an adventure to find a legendary pirate\'s long-lost treasure.', 'TheGoonies.mp4', '1985', NULL),
+(20, 'KikisDeliveryService.jpg', 'Kiki\'s Delivery Service', '80s', 'A young witch, on her mandatory year of independent life, finds fitting into a new community difficult while she supports herself by running an air courier service.', 'KikisDeliveryService.mp4', '1989', NULL),
+(21, 'Superman.jpg', 'Superman', '70s', 'An alien orphan is sent from his dying planet to Earth, where he grows up to become his adoptive home\'s first and greatest superhero.', 'Superman.mp4', '1978', '1'),
+(22, 'KingKong.jpg', 'King Kong', '70s', 'A petroleum exploration expedition comes to an isolated island and encounters a colossal giant gorilla.', 'KingKong.mp4', '1976', '1'),
+(23, 'Westworld.jpg', 'Westworld', '70s', 'A robot malfunction creates havoc and terror for unsuspecting vacationers at a futuristic, adult-themed amusement park.', 'Westworld.mp4', '1973', '1'),
+(24, 'MidnightExpress.jpg', 'Midnight Express', '70s', 'Billy Hayes, an American college student, is caught smuggling drugs out of Turkey and thrown into prison.', 'MidnightExpress.mp4', '1978', '1'),
+(25, 'AClockworkOrange.jpg', 'A Clockwork Orange', '70s', 'In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn\'t go as planned.', 'AClockworkOrange.mp4', '1971', '1'),
+(26, 'WatershipDown.jpg', 'Watership Down', '70s', 'Hoping to escape destruction by human developers and save their community, a colony of rabbits, led by Hazel and Fiver, seek out a safe place to set up a new warren.', 'WatershipDown.mp4', '1978', NULL),
+(27, 'TheTwelveTasksofAsterix.jpg', 'The Twelve Tasks of Asterix', '70s', 'A group of indomitable Gauls are challenged by Roman Emperor Julius Caesar to accomplish twelve impossible tasks.', 'TheTwelveTasksofAsterix.mp4', '1976', NULL),
+(28, 'WillyWonkaandtheChocolateFactory.jpg', 'Willy Wonka and the Chocolate Factory', '70s', 'A poor but hopeful boy seeks one of the five coveted golden tickets that will send him on a tour of Willy Wonka\'s mysterious chocolate factory.', 'WillyWonkaandtheChocolateFactory.mp4', '1971', NULL),
+(29, 'TheMuppetMovie.jpg', 'The Muppet Movie', '70s', 'Kermit and his newfound friends trek across America to find success in Hollywood, but a frog legs merchant is after Kermit.', 'TheMuppetMovie.mp4', '1979', NULL),
+(30, 'RobinHood.jpg', 'Robin Hood', '70s', 'The story of the legendary British outlaw is portrayed with the characters as humanoid animals.', 'RobinHood.mp4', '1973', NULL),
+(31, 'Psycho.jpg', 'Psycho', '60s', 'A Phoenix secretary embezzles $40,000 from her employer\'s client, goes on the run, and checks into a remote motel run by a young man under the domination of his mother.', 'Psycho.mp4', '1960', '1'),
+(32, 'TheGoodtheBadandtheUgly.jpg', 'The Good, the Bad and the Ugly', '60s', 'A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.', 'TheGoodtheBadandtheUgly.mp4', '1966', '1'),
+(33, 'TheGreatEscape.jpg', 'The Great Escape', '60s', 'Allied prisoners of war plan for several hundred of their number to escape from a German camp during World War II.', 'TheGreatEscape.mp4', '1963', '1'),
+(34, 'ButchCassidyandtheSundanceKid.jpg', 'Butch Cassidy and the Sundance Kid', '60s', 'Wyoming, early 1900s. Butch Cassidy and The Sundance Kid are the leaders of a band of outlaws. After a train robbery goes wrong they find themselves on the run with a posse hard on their heels. Their solution - escape to Bolivia.', 'ButchCassidyandtheSundanceKid.mp4', '1969', '1'),
+(35, 'MaryPoppins.jpg', 'Mary Poppins', '60s', 'In turn of the century London, a magical nanny employs music and adventure to help two neglected children become closer to their father.', 'MaryPoppins.mp4', '1964', '1'),
+(36, 'TheSoundofMusic.jpg', 'The Sound of Music', '60s', 'A woman leaves an Austrian convent to become a governess to the children of a Naval officer widower.', 'TheSoundofMusic.mp4', '1965', NULL),
+(37, '101Dalmatians.jpg', '101 Dalmatians', '60s', 'An evil high-fashion designer plots to steal Dalmatian puppies in order to make an extravagant fur coat, but instead creates an extravagant mess.', '101Dalmatians.mp4', '1961', NULL),
+(38, 'RudolphtheRedNosedReindeer.jpg', 'Rudolph the Red-Nosed Reindeer', '60s', 'A misfit reindeer and his friends look for a place that will accept them.', 'RudolphtheRedNosedReindeer.mp4', '1964', NULL),
+(39, 'DrSeussHowtheGrinchStoleChristmas.jpg', 'Dr. Seuss\' How the Grinch Stole Christmas!', '60s', 'A grumpy hermit hatches a plan to steal Christmas from the Whos of Whoville.', 'DrSeussHowtheGrinchStoleChristmas.mp4', '1966', NULL),
+(40, 'TheJungleBook.jpg', 'The Jungle Book', '60s', 'Bagheera the Panther and Baloo the Bear have a difficult time trying to convince a boy to leave the jungle for human civilization.', 'TheJungleBook.mp4', '1967', NULL),
+(41, 'Vertigo.jpg', 'Vertigo', '50s', 'A former police detective juggles wrestling with his personal demons and becoming obsessed with a hauntingly beautiful woman.', 'Vertigo.mp4', '1958', NULL),
+(42, 'SunsetBoulevard.jpg', 'Sunset Boulevard', '50s', 'A screenwriter develops a dangerous relationship with a faded film star determined to make a triumphant return.', 'SunsetBoulevard.mp4', '1950', NULL),
+(43, 'RearWindow.jpg', 'Rear Window', '50s', 'A wheelchair-bound photographer spies on his neighbors from his apartment window and becomes convinced one of them has committed murder.', 'RearWindow.mp4', '1954', NULL),
+(44, 'AllAboutEve.jpg', 'All About Eve ', '50s', 'A seemingly timid but secretly ruthless ingénue insinuates herself into the lives of an aging Broadway star and her circle of theater friends.', 'AllAboutEve.mp4', '1950', NULL),
+(45, 'BridgeontheRiverKwai.jpg', 'Bridge on the River Kwai ', '50s', 'British POWs are forced to build a railway bridge across the river Kwai for their Japanese captors, not knowing that the allied forces are planning to destroy it.', 'BridgeontheRiverKwai.mp4', '1957', NULL),
+(46, 'LadyandtheTramp.jpg', 'Lady and the Tramp', '50s', 'The romantic tale of a sheltered uptown Cocker Spaniel dog and a streetwise downtown Mutt.', 'LadyandtheTramp.mp4', '1955', '1'),
+(47, 'Cinderella.jpg', 'Cinderella', '50s', 'When Cinderella\'s cruel stepmother prevents her from attending the Royal Ball, she gets some unexpected help from the lovable mice Gus and Jaq, and from her Fairy Godmother.', 'Cinderella.mp4', '1950', '1'),
+(48, 'PeterPan.jpg', 'Peter Pan', '50s', 'Wendy and her brothers are whisked away to the magical world of Neverland with the hero of their stories, Peter Pan.', 'PeterPan.mp4', '1953', '1'),
+(49, 'AliceinWonderland.jpg', 'Alice in Wonderland', '50s', 'Alice stumbles into the world of Wonderland. Will she get home? Not if the Queen of Hearts has her way.', 'AliceinWonderland.mp4', '1951', '1'),
+(50, 'SleepingBeauty.jpg', 'Sleeping Beauty', '50s', 'After being snubbed by the royal family, a malevolent fairy places a curse on a princess which only a prince can break, along with the help of three good fairies.', 'SleepingBeauty.mp4', '1959', '1');
 
 -- --------------------------------------------------------
 
@@ -985,6 +1013,81 @@ INSERT INTO `tbl_mov_studio` (`mov_studio_id`, `movies_id`, `studio_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_music`
+--
+
+DROP TABLE IF EXISTS `tbl_music`;
+CREATE TABLE IF NOT EXISTS `tbl_music` (
+  `music_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `music_cover` varchar(75) NOT NULL DEFAULT 'cover_default.jpg',
+  `music_title` varchar(125) NOT NULL,
+  `music_era` varchar(5) NOT NULL,
+  `music_storyline` text NOT NULL,
+  `music_trailer` varchar(75) NOT NULL DEFAULT 'trailer_default.jpg',
+  `music_release` varchar(125) NOT NULL DEFAULT '19',
+  `kids` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`music_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_music`
+--
+
+INSERT INTO `tbl_music` (`music_id`, `music_cover`, `music_title`, `music_era`, `music_storyline`, `music_trailer`, `music_release`, `kids`) VALUES
+(1, 'NirvanaNevermind.jpg', 'Nirvana - Nevermind', '90s', '', 'NirvanaNevermind.mp3', '1991', NULL),
+(2, 'PearlJanTen.jpg', 'Pearl Jan - Ten', '90s', '', 'PearlJanTen.mp3', '1991', NULL),
+(3, 'RadioHeadOkComputer.jpg', 'RadioHead - Ok Computer', '90s', '', 'RadioHeadOkComputer.mp3', '1997', NULL),
+(4, 'SlintSpiderland.jpg', 'Slint - Spiderland', '90s', '', 'SlintSpiderland.mp3', '1991', NULL),
+(5, 'TheFlatlandersMoreaLegendThanaBand.jpg', 'The Flatlanders - More a Legend Than a Band', '90s', '', 'TheFlatlandersMoreaLegendThanaBand.mp3', '1990', NULL),
+(6, 'CarlOrffMusicForChildren.jpg', 'Carl Orff - Music For Children', '90s', '', 'CarlOrffMusicForChildren.mp3', '1990', '1'),
+(7, 'BagpussTheSongs&Music.jpg', 'Bagpuss - The Songs & Music', '90s', '', 'BagpussTheSongs&Music.mp3', '1999', '1'),
+(8, 'DerecBrownHaHaHa.jpg', 'Derec Brown - Ha! Ha! Ha!', '90s', '', 'DerecBrownHaHaHa.mp3', '1992', '1'),
+(9, 'RogerHargreavesMrTickle.jpg', 'Roger Hargreaves - Mr. Tickle', '90s', '', 'RogerHargreavesMrTickle.mp3', '1993', '1'),
+(10, 'TinyTotsClockworkToys.jpg', 'Tiny Tots - Clockwork Toys', '90s', '', 'TinyTotsClockworkToys.mp3', '1993', '1'),
+(11, 'PrinceSignOtheTimes.jpg', 'Prince - Sign \"O\" the Times', '80s', '', 'PrinceSignOtheTimes.mp3', '1987', NULL),
+(12, 'PaulSimonGraceland.jpg', 'Paul Simon - Graceland', '80s', '', 'PaulSimonGraceland.mp3', '1986', NULL),
+(13, 'PixiesDoolittle.jpg', 'Pixies - Doolittle', '80s', '', 'PixiesDoolittle.mp3', '1989', NULL),
+(14, 'TheStoneRosesTheStoneRoses.jpg', 'The Stone Roses - The Stone Roses', '80s', '', 'TheStoneRosesTheStoneRoses.mp3', '1989', NULL),
+(15, 'TheSmithsTheQueenisDead.jpg', 'The Smiths - The Queen is Dead', '80s', '', 'TheSmithsTheQueenisDead.mp3', '1986', NULL),
+(16, 'TheSingingKettleHelloSong.jpg', 'The Singing Kettle - Hello Song', '80s', '', 'TheSingingKettleHelloSong.mp3', '1982', '1'),
+(17, 'TrollsInThePantry.jpg', 'Trolls In The Pantry!', '80s', '', 'TrollsInThePantry.mp3', '1989', '1'),
+(18, 'RobertTearThreeCheersForPooh.jpg', 'Robert Tear - Three Cheers For Pooh', '80s', '', 'RobertTearThreeCheersForPooh.mp3', '1981', '1'),
+(19, 'TheTeddyBearsPicnic.jpg', 'The Teddy Bears\' Picnic', '80s', '', 'TheTeddyBearsPicnic.mp3', '1987', '1'),
+(20, 'PuddingAndPieOneTwoBuckleMyShoe.jpg', 'Ian Beck & Sarah Williams* – Pudding & Pie (Favorite Nursery Rhymes)', '80s', '', 'PuddingAndPieOneTwoBuckleMyShoe.mp3', '1983', '1'),
+(21, 'BobDylanBloodontheTracks.jpg', 'Bob Dylan - Blood on the Tracks', '70s', '', 'BobDylanBloodontheTracks.mp3', '1975', NULL),
+(22, 'PinkFloydTheDarkSideoftheMoon.jpg', 'Pink Floyd - The Dark Side of the Moon', '70s', '', 'PinkFloydTheDarkSideoftheMoon.mp3', '1973', NULL),
+(23, 'JoniMitchellCourtandSpark.jpg', 'Joni Mitchell - Court and Spark', '70s', '', 'JoniMitchellCourtandSpark.mp3', '1974', NULL),
+(24, 'TheClashLondonCalling.jpg', 'The Clash - London Calling', '70s', '', 'TheClashLondonCalling.mp3', '1979', NULL),
+(25, 'DavidBowieHunkyDory.jpg', 'David Bowie - Hunky Dory', '70s', '', 'DavidBowieHunkyDory.mp3', '1971', NULL),
+(26, 'BurlIvesLittleWhiteDuck.jpg', 'Burl Ives - Little White Duck', '70s', '', 'BurlIvesLittleWhiteDuck.mp3', '1974', '1'),
+(27, 'NolaYorkListenWithMother.jpg', 'Nola York - Listen With Mother', '70s', '', 'NolaYorkListenWithMother.mp3', '1977', '1'),
+(28, 'TheHappyGangHeyDiddleDiddle.jpg', 'The Happy Gang - Hey Diddle Diddle', '70s', '', 'TheHappyGangHeyDiddleDiddle.mp3', '1978', '1'),
+(29, 'ChildrenAccompaniedByEiraDaviesBirdsBeesAndAnimals.jpg', 'Children Accompanied By Eira Davies - Birds, Bees And Animals', '70s', '', 'ChildrenAccompaniedByEiraDaviesBirdsBeesAndAnimals.mp3', '1974', '1'),
+(30, 'BeatrixPotterTheTaleOfPeterRabbitAndOtherStories.jpg', 'Beatrix Potter - The Tale Of Peter Rabbit And Other Stories', '70s', '', 'BeatrixPotterTheTaleOfPeterRabbitAndOtherStories.mp3', '1978', '1'),
+(31, 'TheBeatlesRevolver.jpg', 'The Beatles - Revolver', '60s', '', 'TheBeatlesRevolver.mp3', '1966', NULL),
+(32, 'TheBeachBoysPetSounds.jpg', 'The Beach Boys - Pet Sounds', '60s', '', 'TheBeachBoysPetSounds.mp3', '1966', NULL),
+(33, 'TheJimiHendrixExperienceElectricLadyland.jpg', 'The Jimi Hendrix Experience - Electric Ladyland', '60s', '', 'TheJimiHendrixExperienceElectricLadyland.mp3', '1968', NULL),
+(34, 'TheBandTheBand.jpg', 'The Band - The Band', '60s', '', 'TheBandTheBand.mp3', '1969', NULL),
+(35, 'ElvisPresleyFromElvisInMemphis.jpg', 'Elvis Presley - From Elvis In Memphis', '60s', '', 'ElvisPresleyFromElvisInMemphis.mp3', '1969', NULL),
+(36, 'MitchMiller&HisOrchestraPopeyeTheSailorMan.jpg', 'Mitch Miller & His Orchestra - Popeye The Sailor Man', '60s', '', 'MitchMiller&HisOrchestraPopeyeTheSailorMan.mp3', '1962', '1'),
+(37, 'OldMacdonaldHadAFarm.jpg', 'Old Macdonald Had A Farm', '60s', '', 'OldMacdonaldHadAFarm.mp3', '1962', '1'),
+(38, 'TheKiddielandChorusSongsForChildren.jpg', 'The Kiddieland Chorus - Songs For Children', '60s', '', 'TheKiddielandChorusSongsForChildren.mp3', '1965', '1'),
+(39, 'TheGoldenChildrensChorusPollyWollyDoodleAndTheHappyWanderer.jpg', 'The Golden Children\'s Chorus - Polly Wolly Doodle And The Happy Wanderer', '60s', '', 'TheGoldenChildrensChorusPollyWollyDoodleAndTheHappyWanderer.mp3', '1962', '1'),
+(40, 'DanceAndSingMotherGooseWithABeatleBeat.jpg', 'Dance And Sing Mother Goose With A Beatle Beat', '60s', '', 'DanceAndSingMotherGooseWithABeatleBeat.mp3', '1964', '1'),
+(41, 'MilesDavisKindofBlue.jpg', 'Miles Davis - Kind of Blue', '50s', '', 'MilesDavisKindofBlue.mp3', '1959', NULL),
+(42, 'ElvisPresleyElvisPresley.jpg', 'Elvis Presley - Elvis Presley', '50s', '', 'ElvisPresleyElvisPresley.mp3', '1956', NULL),
+(43, 'FrankSinatraComeFlywithMe.jpg', 'Frank Sinatra - Come Fly with Me', '50s', '', 'FrankSinatraComeFlywithMe.mp3', '1958', NULL),
+(44, 'GlennGouldBachTheGoldbergVariations.jpg', 'Glenn Gould - Bach: The Goldberg Variations', '50s', '', 'GlennGouldBachTheGoldbergVariations.mp3', '1956', NULL),
+(45, 'RayCharlesTheGeniusofRayCharles.jpg', 'Ray Charles - The Genius of Ray Charles', '50s', '', 'RayCharlesTheGeniusofRayCharles.mp3', '1959', NULL),
+(46, 'RogerWhitePiedPiper.jpg', 'Roger White - Pied Piper', '50s', '', 'RogerWhitePiedPiper.mp3', '1952', '1'),
+(47, 'DannyKayeTubbytheTuba.jpg', 'Danny Kaye - Tubby the Tuba', '50s', '', 'DannyKayeTubbytheTuba.mp3', '1950', '1'),
+(48, 'TootsCamarataAndHisOrchestraBambi.jpg', 'Toots Camarata And His Orchestra - Bambi', '50s', '', 'TootsCamarataAndHisOrchestraBambi.mp3', '1957', '1'),
+(49, 'HenryHallHushHushHushHereComesTheBogeyman.jpg', 'Henry Hall - Hush, Hush, Hush, Here Comes The Bogeyman', '50s', '', 'HenryHallHushHushHushHereComesTheBogeyman.mp3', '1950', '1'),
+(50, 'CyrilRitchardRideACockHorseAndOtherNurseryRhymes.jpg', 'Cyril Ritchard - Ride A Cock Horse And Other Nursery Rhymes', '50s', '', 'CyrilRitchardRideACockHorseAndOtherNurseryRhymes.mp3', '1958', '1');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_studio`
 --
 
@@ -1024,6 +1127,81 @@ INSERT INTO `tbl_studio` (`studio_id`, `studio_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_tvshows`
+--
+
+DROP TABLE IF EXISTS `tbl_tvshows`;
+CREATE TABLE IF NOT EXISTS `tbl_tvshows` (
+  `tvshows_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `tvshows_cover` varchar(75) NOT NULL DEFAULT 'cover_default.jpg',
+  `tvshows_title` varchar(125) NOT NULL,
+  `tvshows_era` varchar(5) NOT NULL,
+  `tvshows_storyline` text NOT NULL,
+  `tvshows_trailer` varchar(75) NOT NULL DEFAULT 'trailer_default.jpg',
+  `tvshows_release` varchar(125) NOT NULL DEFAULT '19',
+  `kids` varchar(80) DEFAULT NULL,
+  PRIMARY KEY (`tvshows_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_tvshows`
+--
+
+INSERT INTO `tbl_tvshows` (`tvshows_id`, `tvshows_cover`, `tvshows_title`, `tvshows_era`, `tvshows_storyline`, `tvshows_trailer`, `tvshows_release`, `kids`) VALUES
+(1, 'FreshPrinceofBelAir.jpg', 'Fresh Prince of Bel-Air', '90s', 'The Fresh Prince of Bel-Air was a 90s African-American sitcom that starred Will Smith as a teenager from a tough neighborhood in West Philadelphia, whose mother sends him to live with their wealthy relatives', 'FreshPrinceofBelAir.mp4', '1990', NULL),
+(2, 'Friends.jpg', 'Friends', '90s', 'Friends is a 90\'s Comedy TV show, based in Manhattan, about 6 friends who go through just about every life experience imaginable together; love, marriage, divorce, children, heartbreaks, fights, new jobs and job losses and all sorts of drama.', 'Friends.mp4', '1994', NULL),
+(3, 'BuffytheVampireSlayer.jpg', 'Buffy the Vampire Slayer', '90s', 'A young woman, destined to slay vampires, demons and other infernal creatures, deals with her life fighting evil, with the help of her friends.', 'BuffytheVampireSlayer.mp4', '1997', NULL),
+(4, 'Frasier.jpg', 'Frasier', '90s', 'Dr. Frasier Crane moves back to his hometown of Seattle, where he lives with his father, and works as a radio psychiatrist.', 'Frasier.mp4', '1993', NULL),
+(5, 'TheXFiles.jpg', 'The X-Files', '90s', 'Two F.B.I. Agents, Fox Mulder the believer and Dana Scully the skeptic, investigate the strange and unexplained, while hidden forces work to impede their efforts.', 'TheXFiles.mp4', '1993', NULL),
+(6, 'Rugrats.jpg', 'Rugrats', '90s', 'The cartoon misadventures of four babies and their snotty older cousin as they face the things in life they don\'t understand.', 'Rugrats.mp4', '1990', '1'),
+(7, 'Doug.jpg', 'Doug', '90s', 'The life of a young boy as he meets friends, falls in love, maneuvers his way through grade 6 and writes all about it in his journal.', 'Doug.mp4', '1991', '1'),
+(8, 'TheAdventuresofPete&Pete.jpg', 'The Adventures of Pete & Pete', '90s', 'This delightfully quirky show looks at the lives and adventures of two red-headed brothers with the same name.', 'TheAdventuresofPete&Pete.mp4', '1994', '1'),
+(9, 'HeyArnold.jpg', 'Hey Arnold', '90s', 'The everyday life of Arnold, a fourth-grader in a nameless city that resembles Brooklyn, New York, who lives in a multi-racial boarding house with his grandparents and a motley assortment of friends and neighbors.', 'HeyArnold.mp4', '1996', '1'),
+(10, 'LegendsoftheHiddenTemple.jpg', 'Legends of the Hidden Temple', '90s', 'Teams compete in elimination challenges with the final team going on to search for the treasure inside the titular Mesoamerican \"Hidden Temple\".', 'LegendsoftheHiddenTemple.mp4', '1993', '1'),
+(11, 'Cheers.jpg', 'Cheers', '80s', 'The regulars of the Boston bar \"Cheers\" share their experiences and lives with each other while drinking or working at the bar where everybody knows your name.', 'Cheers.mp4', '1982', NULL),
+(12, 'MacGyver.jpg', 'MacGyver', '80s', 'The adventures of a secret Agent armed with almost infinite scientific resourcefulness.', 'MacGyver.mp4', '1985', NULL),
+(13, 'MarriedWithChildren.jpg', 'Married... With Children', '80s', 'Al Bundy is a misanthropic women\'s shoe salesman with a miserable life. He hates his job, his wife is lazy, his son is dysfunctional (especially with women), and his daughter is dim-witted and promiscuous.', 'MarriedWithChildren.mp4', '1987', NULL),
+(14, 'KnightRider.jpg', 'Knight Rider', '80s', 'A lone crimefighter battles the forces of evil with the help of a virtually indestructible and artificially intelligent supercar.', 'KnightRider.mp4', '1982', NULL),
+(15, 'StarTrekTheNextGeneration.jpg', 'Star Trek: The Next Generation', '80s', 'Set almost 100 years after Captain Kirk\'s five-year mission, a new generation of Starfleet officers set off in the U.S.S. Enterprise-D on their own mission to go where no one has gone before.', 'StarTrekTheNextGeneration.mp4', '1987', NULL),
+(16, 'DoubleDare.jpg', 'Double Dare', '80s', 'One in a long-running series of game shows, where two-member teams of children compete to answer questions and complete stunts.', 'DoubleDare.mp4', '1986', '1'),
+(17, 'Alf.jpg', 'Alf', '80s', 'A furry alien wiseguy comes to live with the Tanner family after crashing into their garage.', 'Alf.mp4', '1986', '1'),
+(18, 'InspectorGadget.jpg', 'Inspector Gadget', '80s', 'A bumbling bionic police inspector stumbles about on his cases, while his niece and dog secretly do the real investigative work.', 'InspectorGadget.mp4', '1983', '1'),
+(19, 'ThunderCats.jpg', 'ThunderCats', '80s', 'A team of humanoid cats fight evil in their adopted home world.', 'ThunderCats.mp4', '1985', '1'),
+(20, 'HeMan.jpg', 'He-Man', '80s', 'The most powerful man in the universe, He-Man, goes against the evil forces of Skeletor to save the planet Eternia and to protect the secrets of Castle Grayskull.', 'HeMan.jpg', '1983', '1'),
+(21, 'WonderWoman.jpg', 'Wonder Woman', '70s', 'The adventures of the greatest of the female superheroes.', 'WonderWoman.jpg', '1975', NULL),
+(22, 'UFO.jpg.jpg', 'UFO', '70s', 'The missions of the Supreme Headquarters Alien Defence Organization, which defends Earth from extra-terrestrial threats.', 'UFO.mp4', '1970', NULL),
+(23, 'ThePartridgeFamily.jpg', 'The Partridge Family', '70s', 'The humorous adventures of a family of pop musicians.', 'ThePartridgeFamily.mp4', '1970', NULL),
+(24, 'TheMuppetShow.jpg', 'The Muppets Show', '70s', 'Kermit the Frog and his fellow Muppets put on a vaudeville show at their theatre, bringing in a famous celebrity to help out for each episode.', 'TheMuppetShow.mp4', '1974', '1'),
+(25, 'BattlestarGalactica,jpg', 'Battlestar Galactica', '70s', 'After the destruction of the Twelve Colonies of Mankind, the last major fighter carrier leads a makeshift fugitive fleet in a desperate search for the legendary planet Earth.', 'BattlestarGalactica.mp4', '1979', NULL),
+(26, 'LittleHouseOnThePrairie.jpg', 'Little House on the Prairie', '70s', 'The life and adventures of the Ingalls family in the nineteenth century American Midwest.', 'LittleHouseOnThePrairie.mp4', '1974', NULL),
+(27, 'SuperFriends.jpg', 'Super Friends', '70s', 'The greatest of the DC Comics superheroes work together to uphold the good with the help of some young proteges.', 'SuperFriends.mp4', '1973', '1'),
+(28, 'TheManyAdventuresOfWinnieThePooh.jpg', 'The Many Adventures of Winnie the Pooh', '70s', 'In this collection of animated shorts based on the stories and characters by A.A. Milne, Winnie the Pooh, a honey-loving teddy bear, embarks on some eccentric adventures.', 'TheManyAdventuresOfWinnieThePooh.mp4', '1977', '1'),
+(29, 'CaptainCavemanAndTheTeenAngels.jpg', 'Captain Caveman and the Teen Angels', '70s', 'The adventures of a superhero caveman and a trio of female amateur detectives.', 'CaptainCavemanAndTheTeenAngels.mp4', '1977', '1'),
+(30, 'FatAlbertAndTheCosbyKids.jpg', 'Fat Albert and the Cosby Kids', '70s', 'The educational adventures of a group of Afro-American inner city kids.', 'FatAlbertAndTheCosbyKids.mp4', '1972', '1'),
+(31, 'BeverlyHillbillies.jpg', 'The Beverly Hillbillies', '60s', 'A nouveau riche hillbilly family moves to Beverly Hills and shakes up the privileged society with their hayseed ways.', 'BeverlyHillbillies.mp4', '1962', NULL),
+(32, 'Bewitched.jpg', 'Bewitched', '60s', 'A witch married to an ordinary man cannot resist using her magic powers to solve the problems her family faces.', 'Bewitched.mp4', '1964', NULL),
+(33, 'TheAddamsFamily.jpg', 'The Addams Family', '60s', 'The misadventures of a blissfully macabre but extremely loving family.', 'TheAddamsFamily.mp4', '1964', NULL),
+(34, 'LostinSpace.jpg', 'Lost in Space', '60s', 'A space colony family struggles to survive when a spy/accidental stowaway throws their ship hopelessly off course.', 'LostinSpace.mp4', '1965', NULL),
+(35, 'ThatGirl.jpg', 'That Girl', '60s', 'An aspiring actress moves from her hometown of Brewster, New York, to try to make it big in New York City, having to take several offbeat \"temp\" jobs to support herself in between her various auditions and bit parts.', 'ThatGirl.mp4', '1966', NULL),
+(36, 'Batman.jpg', 'Batman', '60s', 'The series focuses on Batman and Robin as they defend Gotham City from its various criminals.', 'Batman.mp4', '1966', '1'),
+(37, 'Birdman.jpg', 'Birdman', '60s', 'A winged superhero who gets his powers from the sun battles various evildoers with the help of his eagle sidekick Avenger.', 'Birdman.mp4', '1967', '1'),
+(38, 'WackyRaces.jpg', 'Wacky Races', '60s', 'The participants of an unusual car race compete around America.', 'WackyRaces.mp4', '1968', '1'),
+(39, 'SpaceGhost.jpg', 'Space Ghost', '60s', 'The adventures of a space superhero who can become invisible and his sidekicks.', 'SpaceGhost.mp4', '1966', '1'),
+(40, 'JohnnyQuest.jpg', 'Johnny Quest', '60s', 'The Quest family and their bodyguard investigate strange phenomena and battle villains around the world.', 'JohnnyQuest.mp4', '1964', '1'),
+(41, 'ILoveLucy.jpg', 'I Love Lucy', '50s', 'The wife of a band leader constantly tries to become a star - in spite of her having no talent, and gets herself (along with her best friend) into the funniest predicaments.', 'ILoveLucy.mp4', '1951', NULL),
+(42, 'FatherKnowsBest.jpg', 'Father Knows Best', '50s', 'The popular radio show comes to life in this hit sitcom about a wise family man, Jim Anderson, his common-sense wife Margaret and their children Betty, Bud and Kathy.', 'FatherKnowsBest.mp4', '1954', NULL),
+(43, 'AlfredHitchcockPresents.jpg', 'Alfred Hitchcock Presents ', '50s', 'Series of unrelated short stories covering elements of crime, horror, drama, and comedy about people of different backgrounds committing murders, suicides, thefts, and other sorts of crime caused by certain motivations, perceived or not.', 'AlfredHitchcockPresents.mp4', '1955', NULL),
+(44, 'TheLoneRanger.jpg', 'The Lone Ranger', '50s', 'Wealthy rancher Reese Kilgore aims to grab silver-rich Indian land by skilfully pitting Indians against settlers but the suspicious territorial governor sends The Lone Ranger to investigate.', 'TheLoneRanger.mp4', '1956', NULL),
+(45, 'TheLifeandLegendofWyattEarp.jpg', 'The Life and Legend of Wyatt Earp', '50s', 'Loosely based on historical fact, the series portrays the gunslinging Wyatt Earp and his successful determination for law and order.', 'TheLifeandLegendofWyattEarp.mp4', '1955', NULL),
+(46, 'Lassie.jpg', 'Lassie', '50s', 'The ongoing saga of the Martin family and their beloved collie, Lassie.', 'Lassie.mp4', '1954', '1'),
+(47, 'RockyandBullwinkle.jpg', 'The Rocky and Bullwinkle Show', '50s', 'Rocky, a plucky flying squirrel and Bullwinkle, a bumbling but lovable moose, have a series of ongoing adventures.', 'RockyandBullwinkle.mp4', '1959', '1'),
+(48, 'MickeyMouseClub.jpg', 'The Mickey Mouse Club', '50s', 'Mickey Mouse hosts a youth-oriented variety show.', 'MickeyMouseClub.mp4', '1955', '1'),
+(49, 'TheRuffReddyShow.jpg', 'The Ruff & Reddy Show', '50s', 'The adventures of Ruff, a smart and steadfast cat, and Reddy, a good-hearted and brave but not a very bright dog.', 'TheRuffReddyShow.jpg', '1957', '1'),
+(50, 'FelixtheCat.jpg', 'Felix the Cat', '50s', 'The complete 1958-1959 full-color series!', 'FelixtheCat.mp4', '1958', '1');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_user`
 --
 
@@ -1037,19 +1215,21 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `user_email` varchar(250) NOT NULL,
   `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
-  `user_admin` tinyint(4) DEFAULT NULL,
-  `user_access` tinyint(4) DEFAULT NULL,
+  `kids` varchar(80) DEFAULT NULL,
+  `user_admin` int(2) DEFAULT NULL,
+  `user_access` int(2) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_picture`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_admin`, `user_access`) VALUES
-(1, 'trevor.png', 'Trevor', 'user1', 'password', 't@t.com', '2019-02-01 19:07:35', '::1', 1, 5),
-(2, 'andres.jpg', 'Andres', 'andresito', '123', 'andresgallo@gamil.com', '2021-03-07 08:02:07', 'no', NULL, 3),
-(3, 'sandro.jpg', 'Sandro', 'Sandrini', '123', 'sandro@gmail.com', '2021-03-07 08:21:54', 'no', 1, 3);
+INSERT INTO `tbl_user` (`user_id`, `user_picture`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `kids`, `user_admin`, `user_access`) VALUES
+(1, 'trevor.png', 'Trevor', 'user1', 'pas', 't@t.com', '2019-02-01 19:07:35', '::1', NULL, 1, 1),
+(2, 'andres.jpg', 'Andres', 'andresito', '123', 'andresgallo@gamil.com', '2021-03-07 08:02:07', 'no', NULL, NULL, NULL),
+(3, 'sandro.jpg', 'Sandro', 'Sandrini', '123', 'sandro@gmail.com', '2021-03-07 08:21:54', 'no', NULL, NULL, NULL),
+(7, 'defaultpic.jpg', 'panocha', 'panocha', 'sucia', 'panuchis@hotmail.com', '2021-04-17 01:24:12', 'no', '', NULL, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
