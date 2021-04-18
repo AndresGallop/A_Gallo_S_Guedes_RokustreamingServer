@@ -7,7 +7,7 @@ router.use(express.urlencoded({extended:false}));
 
 router.post('/admin/login', (req, res) => {
     // console.log(req.body.username, req.body.password);
-    connect.query(`SELECT user_id, user_admin, user_access, user_picture, kids FROM tbl_user WHERE user_name = "${req.body.username}" AND user_pass = "${req.body.password}"`, (err, row) => {
+    connect.query(`SELECT user_id, user_admin, user_access, user_picture, kids, user_fname FROM tbl_user WHERE user_name = "${req.body.username}" AND user_pass = "${req.body.password}"`, (err, row) => {
         if (err) throw err;
 
         if (row.length) {
@@ -21,7 +21,7 @@ router.post('/admin/login', (req, res) => {
 router.post('/admin/signup', (req, res) => {
     // console.log(req.body.username, req.body.password);
     connect.query(
-        `INSERT INTO tbl_user ( user_name, user_pass, user_email, user_fname, kids ) VALUES ("${req.body.username}", "${req.body.password}", "${req.body.email}", "${req.body.username}" , "${req.body.kid}")`, (err, row) => {
+        `INSERT INTO tbl_user ( user_name, user_pass, user_email, user_fname, kids ) VALUES ("${req.body.username}", "${req.body.password}", "${req.body.email}", "${req.body.nickname}" , "${req.body.kid}")`, (err, row) => {
         if (err) throw err;
 
         if (row.length) {
@@ -33,7 +33,7 @@ router.post('/admin/signup', (req, res) => {
 })
 
 router.get('/admin/getusers', (req, res) => {
-    connect.query('SELECT user_id, user_name, user_admin, user_access, user_picture, kids FROM tbl_user', (err, users) => {
+    connect.query('SELECT user_id, user_name, user_admin, user_access, user_picture, kids, user_fname FROM tbl_user', (err, users) => {
         if (err) throw err;
 
         res.status(200).json(users);
