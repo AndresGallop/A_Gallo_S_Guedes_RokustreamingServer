@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 18, 2021 at 12:14 AM
+-- Generation Time: Apr 18, 2021 at 03:58 AM
 -- Server version: 5.7.31
--- PHP Version: 7.3.21
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -1219,7 +1219,7 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `user_admin` int(2) DEFAULT NULL,
   `user_access` int(2) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
@@ -1228,8 +1228,8 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 INSERT INTO `tbl_user` (`user_id`, `user_picture`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `kids`, `user_admin`, `user_access`) VALUES
 (1, 'trevor.png', 'Trevor', 'user1', 'pas', 't@t.com', '2019-02-01 19:07:35', '::1', NULL, 1, 1),
 (2, 'andres.jpg', 'Andres', 'andresito', '123', 'andresgallo@gamil.com', '2021-03-07 08:02:07', 'no', NULL, NULL, NULL),
-(3, 'sandro.jpg', 'Sandro', 'Sandrini', '123', 'sandro@gmail.com', '2021-03-07 08:21:54', 'no', NULL, NULL, NULL),
-(7, 'defaultpic.jpg', 'panocha', 'panocha', 'sucia', 'panuchis@hotmail.com', '2021-04-17 01:24:12', 'no', '', NULL, NULL);
+(3, 'sandro.jpg', 'Sandro (kid)', 'Sandrini', '123', 'sandro@gmail.com', '2021-03-07 08:21:54', 'no', '1', NULL, NULL),
+(21, 'defaultpic.jpg', 'amor (kid)', 'dani', 'hola', 'dani', '2021-04-18 03:24:24', 'no', 'yes', NULL, NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
