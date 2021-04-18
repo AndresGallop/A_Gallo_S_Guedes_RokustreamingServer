@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 17, 2021 at 03:42 AM
+-- Generation Time: Apr 18, 2021 at 12:14 AM
 -- Server version: 5.7.31
--- PHP Version: 7.4.9
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -676,7 +676,7 @@ INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_e
 (13, 'TheTerminator.jpg', 'The Terminator', '80s', 'A human soldier is sent from 2029 to 1984 to stop an almost indestructible cyborg killing machine, sent from the same year, which has been programmed to execute a young woman whose unborn son is the key to humanity\'s future salvation.', 'TheTerminator.mp4', '1984', '1'),
 (14, 'Highlander.jpg', 'Highlander', '80s', 'An immortal Scottish swordsman must confront the last of his immortal opponent, a murderously brutal barbarian who lusts for the fabled \"Prize\".', 'Highlander.mp4', '1986', '1'),
 (15, 'TheEvilDead.jpg', 'The Evil Dead', '80s', 'Three decades after the Empire&rsquo;s defeat, a new threat arises in the militant First Order. Stormtrooper defector Finn and spare parts scavenger Rey are caught up in the Resistance&rsquo;s search for the missing Luke Skywalker.', 'TheEvilDead.mp4', '1981', '1'),
-(16, 'CaravanofCourage.jpg', 'Caravan of Courage', '80s', 'Wicket the Ewok and his friends agree to help two shipwrecked human children, Mace and Cindel, on a quest to find their parents.', 'CaravanofCourage.mp4', '1984', NULL),
+(16, 'CaravanofCourage.jpg', 'Caravan of Courage', '80s', 'Wicket the Ewok and his friends agree to help two shipwrecked human children, Mace and Cindel, on a quest to find their parents.', 'TheEwokAdventureCaravanOfCourage.mp4', '1984', NULL),
 (17, 'TheNeverendingStory.jpg', 'The Neverending Story', '80s', 'A troubled boy dives into a wondrous fantasy world through the pages of a mysterious book.', 'TheNeverendingStory.mp4', '1984', NULL),
 (18, 'TheDarkCrystal.jpg', 'The Dark Crystal', '80s', 'On another planet in the distant past, a Gelfling embarks on a quest to find the missing shard of a magical crystal, and so restore order to his world.', 'TheDarkCrystal.mp4', '1982', NULL),
 (19, 'TheGoonies.jpg', 'The Goonies', '80s', 'A group of young misfits called The Goonies discover an ancient map and set out on an adventure to find a legendary pirate\'s long-lost treasure.', 'TheGoonies.mp4', '1985', NULL),
@@ -687,7 +687,7 @@ INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_e
 (24, 'MidnightExpress.jpg', 'Midnight Express', '70s', 'Billy Hayes, an American college student, is caught smuggling drugs out of Turkey and thrown into prison.', 'MidnightExpress.mp4', '1978', '1'),
 (25, 'AClockworkOrange.jpg', 'A Clockwork Orange', '70s', 'In the future, a sadistic gang leader is imprisoned and volunteers for a conduct-aversion experiment, but it doesn\'t go as planned.', 'AClockworkOrange.mp4', '1971', '1'),
 (26, 'WatershipDown.jpg', 'Watership Down', '70s', 'Hoping to escape destruction by human developers and save their community, a colony of rabbits, led by Hazel and Fiver, seek out a safe place to set up a new warren.', 'WatershipDown.mp4', '1978', NULL),
-(27, 'TheTwelveTasksofAsterix.jpg', 'The Twelve Tasks of Asterix', '70s', 'A group of indomitable Gauls are challenged by Roman Emperor Julius Caesar to accomplish twelve impossible tasks.', 'TheTwelveTasksofAsterix.mp4', '1976', NULL),
+(27, 'TheTwelveTasksofAsterix.jpg', 'The Twelve Tasks of Asterix', '70s', 'A group of indomitable Gauls are challenged by Roman Emperor Julius Caesar to accomplish twelve impossible tasks.', 'TwelveTasksOfAsterix.mp4', '1976', NULL),
 (28, 'WillyWonkaandtheChocolateFactory.jpg', 'Willy Wonka and the Chocolate Factory', '70s', 'A poor but hopeful boy seeks one of the five coveted golden tickets that will send him on a tour of Willy Wonka\'s mysterious chocolate factory.', 'WillyWonkaandtheChocolateFactory.mp4', '1971', NULL),
 (29, 'TheMuppetMovie.jpg', 'The Muppet Movie', '70s', 'Kermit and his newfound friends trek across America to find success in Hollywood, but a frog legs merchant is after Kermit.', 'TheMuppetMovie.mp4', '1979', NULL),
 (30, 'RobinHood.jpg', 'Robin Hood', '70s', 'The story of the legendary British outlaw is portrayed with the characters as humanoid animals.', 'RobinHood.mp4', '1973', NULL),
@@ -705,7 +705,7 @@ INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_e
 (42, 'SunsetBoulevard.jpg', 'Sunset Boulevard', '50s', 'A screenwriter develops a dangerous relationship with a faded film star determined to make a triumphant return.', 'SunsetBoulevard.mp4', '1950', NULL),
 (43, 'RearWindow.jpg', 'Rear Window', '50s', 'A wheelchair-bound photographer spies on his neighbors from his apartment window and becomes convinced one of them has committed murder.', 'RearWindow.mp4', '1954', NULL),
 (44, 'AllAboutEve.jpg', 'All About Eve ', '50s', 'A seemingly timid but secretly ruthless ingénue insinuates herself into the lives of an aging Broadway star and her circle of theater friends.', 'AllAboutEve.mp4', '1950', NULL),
-(45, 'BridgeontheRiverKwai.jpg', 'Bridge on the River Kwai ', '50s', 'British POWs are forced to build a railway bridge across the river Kwai for their Japanese captors, not knowing that the allied forces are planning to destroy it.', 'BridgeontheRiverKwai.mp4', '1957', NULL),
+(45, 'BridgeontheRiverKwai.jpg', 'Bridge on the River Kwai ', '50s', 'British POWs are forced to build a railway bridge across the river Kwai for their Japanese captors, not knowing that the allied forces are planning to destroy it.', 'TheBridgeOnTheRiverKwai.mp4', '1957', NULL),
 (46, 'LadyandtheTramp.jpg', 'Lady and the Tramp', '50s', 'The romantic tale of a sheltered uptown Cocker Spaniel dog and a streetwise downtown Mutt.', 'LadyandtheTramp.mp4', '1955', '1'),
 (47, 'Cinderella.jpg', 'Cinderella', '50s', 'When Cinderella\'s cruel stepmother prevents her from attending the Royal Ball, she gets some unexpected help from the lovable mice Gus and Jaq, and from her Fairy Godmother.', 'Cinderella.mp4', '1950', '1'),
 (48, 'PeterPan.jpg', 'Peter Pan', '50s', 'Wendy and her brothers are whisked away to the magical world of Neverland with the hero of their stories, Peter Pan.', 'PeterPan.mp4', '1953', '1'),
@@ -1035,14 +1035,14 @@ CREATE TABLE IF NOT EXISTS `tbl_music` (
 
 INSERT INTO `tbl_music` (`music_id`, `music_cover`, `music_title`, `music_era`, `music_storyline`, `music_trailer`, `music_release`, `kids`) VALUES
 (1, 'NirvanaNevermind.jpg', 'Nirvana - Nevermind', '90s', '', 'NirvanaNevermind.mp3', '1991', NULL),
-(2, 'PearlJanTen.jpg', 'Pearl Jan - Ten', '90s', '', 'PearlJanTen.mp3', '1991', NULL),
-(3, 'RadioHeadOkComputer.jpg', 'RadioHead - Ok Computer', '90s', '', 'RadioHeadOkComputer.mp3', '1997', NULL),
+(2, 'PearlJanTen.jpg', 'Pearl Jan - Ten', '90s', '', 'PearlJamTen.mp3', '1991', NULL),
+(3, 'RadioHeadOkComputer.jpg', 'RadioHead - Ok Computer', '90s', '', 'RadiohedOKComputer.mp3', '1997', NULL),
 (4, 'SlintSpiderland.jpg', 'Slint - Spiderland', '90s', '', 'SlintSpiderland.mp3', '1991', NULL),
-(5, 'TheFlatlandersMoreaLegendThanaBand.jpg', 'The Flatlanders - More a Legend Than a Band', '90s', '', 'TheFlatlandersMoreaLegendThanaBand.mp3', '1990', NULL),
+(5, 'TheFlatlandersMoreaLegendThanaBand.jpg', 'The Flatlanders - More a Legend Than a Band', '90s', '', 'TheFlatlandersDallas.mp3', '1990', NULL),
 (6, 'CarlOrffMusicForChildren.jpg', 'Carl Orff - Music For Children', '90s', '', 'CarlOrffMusicForChildren.mp3', '1990', '1'),
-(7, 'BagpussTheSongs&Music.jpg', 'Bagpuss - The Songs & Music', '90s', '', 'BagpussTheSongs&Music.mp3', '1999', '1'),
-(8, 'DerecBrownHaHaHa.jpg', 'Derec Brown - Ha! Ha! Ha!', '90s', '', 'DerecBrownHaHaHa.mp3', '1992', '1'),
-(9, 'RogerHargreavesMrTickle.jpg', 'Roger Hargreaves - Mr. Tickle', '90s', '', 'RogerHargreavesMrTickle.mp3', '1993', '1'),
+(7, 'BagpussTheSongs&Music.jpg', 'Bagpuss - The Songs & Music', '90s', '', 'BagpussTheSongsAndMusic.mp3', '1999', '1'),
+(8, 'DerecBrownHaHaHa.jpg', 'Derec Brown - Ha! Ha! Ha!', '90s', '', 'DerekBrownHaHaHa.mp3', '1992', '1'),
+(9, 'RogerHargreavesMrTickle.jpg', 'Roger Hargreaves - Mr. Tickle', '90s', '', 'RogerHargreavesMrTickles.mp3', '1993', '1'),
 (10, 'TinyTotsClockworkToys.jpg', 'Tiny Tots - Clockwork Toys', '90s', '', 'TinyTotsClockworkToys.mp3', '1993', '1'),
 (11, 'PrinceSignOtheTimes.jpg', 'Prince - Sign \"O\" the Times', '80s', '', 'PrinceSignOtheTimes.mp3', '1987', NULL),
 (12, 'PaulSimonGraceland.jpg', 'Paul Simon - Graceland', '80s', '', 'PaulSimonGraceland.mp3', '1986', NULL),
@@ -1051,37 +1051,37 @@ INSERT INTO `tbl_music` (`music_id`, `music_cover`, `music_title`, `music_era`, 
 (15, 'TheSmithsTheQueenisDead.jpg', 'The Smiths - The Queen is Dead', '80s', '', 'TheSmithsTheQueenisDead.mp3', '1986', NULL),
 (16, 'TheSingingKettleHelloSong.jpg', 'The Singing Kettle - Hello Song', '80s', '', 'TheSingingKettleHelloSong.mp3', '1982', '1'),
 (17, 'TrollsInThePantry.jpg', 'Trolls In The Pantry!', '80s', '', 'TrollsInThePantry.mp3', '1989', '1'),
-(18, 'RobertTearThreeCheersForPooh.jpg', 'Robert Tear - Three Cheers For Pooh', '80s', '', 'RobertTearThreeCheersForPooh.mp3', '1981', '1'),
-(19, 'TheTeddyBearsPicnic.jpg', 'The Teddy Bears\' Picnic', '80s', '', 'TheTeddyBearsPicnic.mp3', '1987', '1'),
+(18, 'RobertTearThreeCheersForPooh.jpg', 'Robert Tear - Three Cheers For Pooh', '80s', '', 'RobertTearThreeCheersForPoohSideA.mp3', '1981', '1'),
+(19, 'TheTeddyBearsPicnic.jpg', 'The Teddy Bears\' Picnic', '80s', '', 'TeddyBearsPicnicSungByAnneMurray.mp3', '1987', '1'),
 (20, 'PuddingAndPieOneTwoBuckleMyShoe.jpg', 'Ian Beck & Sarah Williams* – Pudding & Pie (Favorite Nursery Rhymes)', '80s', '', 'PuddingAndPieOneTwoBuckleMyShoe.mp3', '1983', '1'),
 (21, 'BobDylanBloodontheTracks.jpg', 'Bob Dylan - Blood on the Tracks', '70s', '', 'BobDylanBloodontheTracks.mp3', '1975', NULL),
-(22, 'PinkFloydTheDarkSideoftheMoon.jpg', 'Pink Floyd - The Dark Side of the Moon', '70s', '', 'PinkFloydTheDarkSideoftheMoon.mp3', '1973', NULL),
+(22, 'PinkFloydTheDarkSideoftheMoon.jpg', 'Pink Floyd - The Dark Side of the Moon', '70s', '', 'PinkFloydDarkSideOfTheMoon.mp3', '1973', NULL),
 (23, 'JoniMitchellCourtandSpark.jpg', 'Joni Mitchell - Court and Spark', '70s', '', 'JoniMitchellCourtandSpark.mp3', '1974', NULL),
 (24, 'TheClashLondonCalling.jpg', 'The Clash - London Calling', '70s', '', 'TheClashLondonCalling.mp3', '1979', NULL),
 (25, 'DavidBowieHunkyDory.jpg', 'David Bowie - Hunky Dory', '70s', '', 'DavidBowieHunkyDory.mp3', '1971', NULL),
 (26, 'BurlIvesLittleWhiteDuck.jpg', 'Burl Ives - Little White Duck', '70s', '', 'BurlIvesLittleWhiteDuck.mp3', '1974', '1'),
 (27, 'NolaYorkListenWithMother.jpg', 'Nola York - Listen With Mother', '70s', '', 'NolaYorkListenWithMother.mp3', '1977', '1'),
 (28, 'TheHappyGangHeyDiddleDiddle.jpg', 'The Happy Gang - Hey Diddle Diddle', '70s', '', 'TheHappyGangHeyDiddleDiddle.mp3', '1978', '1'),
-(29, 'ChildrenAccompaniedByEiraDaviesBirdsBeesAndAnimals.jpg', 'Children Accompanied By Eira Davies - Birds, Bees And Animals', '70s', '', 'ChildrenAccompaniedByEiraDaviesBirdsBeesAndAnimals.mp3', '1974', '1'),
-(30, 'BeatrixPotterTheTaleOfPeterRabbitAndOtherStories.jpg', 'Beatrix Potter - The Tale Of Peter Rabbit And Other Stories', '70s', '', 'BeatrixPotterTheTaleOfPeterRabbitAndOtherStories.mp3', '1978', '1'),
+(29, 'ChildrenAccompaniedByEiraDaviesBirdsBeesAndAnimals.jpg', 'Children Accompanied By Eira Davies - Birds, Bees And Animals', '70s', '', 'TheBirdsAndTheBeesABCKids.mp3', '1974', '1'),
+(30, 'BeatrixPotterTheTaleOfPeterRabbitAndOtherStories.jpg', 'Beatrix Potter - The Tale Of Peter Rabbit And Other Stories', '70s', '', 'BeatrixPotterTheTaleOfPeterRabbit.mp3', '1978', '1'),
 (31, 'TheBeatlesRevolver.jpg', 'The Beatles - Revolver', '60s', '', 'TheBeatlesRevolver.mp3', '1966', NULL),
 (32, 'TheBeachBoysPetSounds.jpg', 'The Beach Boys - Pet Sounds', '60s', '', 'TheBeachBoysPetSounds.mp3', '1966', NULL),
 (33, 'TheJimiHendrixExperienceElectricLadyland.jpg', 'The Jimi Hendrix Experience - Electric Ladyland', '60s', '', 'TheJimiHendrixExperienceElectricLadyland.mp3', '1968', NULL),
 (34, 'TheBandTheBand.jpg', 'The Band - The Band', '60s', '', 'TheBandTheBand.mp3', '1969', NULL),
 (35, 'ElvisPresleyFromElvisInMemphis.jpg', 'Elvis Presley - From Elvis In Memphis', '60s', '', 'ElvisPresleyFromElvisInMemphis.mp3', '1969', NULL),
-(36, 'MitchMiller&HisOrchestraPopeyeTheSailorMan.jpg', 'Mitch Miller & His Orchestra - Popeye The Sailor Man', '60s', '', 'MitchMiller&HisOrchestraPopeyeTheSailorMan.mp3', '1962', '1'),
+(36, 'MitchMiller&HisOrchestraPopeyeTheSailorMan.jpg', 'Mitch Miller & His Orchestra - Popeye The Sailor Man', '60s', '', 'JackMercerPopeyeTheSailorMan.mp3', '1962', '1'),
 (37, 'OldMacdonaldHadAFarm.jpg', 'Old Macdonald Had A Farm', '60s', '', 'OldMacdonaldHadAFarm.mp3', '1962', '1'),
-(38, 'TheKiddielandChorusSongsForChildren.jpg', 'The Kiddieland Chorus - Songs For Children', '60s', '', 'TheKiddielandChorusSongsForChildren.mp3', '1965', '1'),
+(38, 'TheKiddielandChorusSongsForChildren.jpg', 'The Kiddieland Chorus - Songs For Children', '60s', '', 'KiddielandChorusSongsForChildren.mp3', '1965', '1'),
 (39, 'TheGoldenChildrensChorusPollyWollyDoodleAndTheHappyWanderer.jpg', 'The Golden Children\'s Chorus - Polly Wolly Doodle And The Happy Wanderer', '60s', '', 'TheGoldenChildrensChorusPollyWollyDoodleAndTheHappyWanderer.mp3', '1962', '1'),
 (40, 'DanceAndSingMotherGooseWithABeatleBeat.jpg', 'Dance And Sing Mother Goose With A Beatle Beat', '60s', '', 'DanceAndSingMotherGooseWithABeatleBeat.mp3', '1964', '1'),
-(41, 'MilesDavisKindofBlue.jpg', 'Miles Davis - Kind of Blue', '50s', '', 'MilesDavisKindofBlue.mp3', '1959', NULL),
+(41, 'MilesDavisKindofBlue.jpg', 'Miles Davis - Kind of Blue', '50s', '', 'MilesDavisSoWhat.mp3', '1959', NULL),
 (42, 'ElvisPresleyElvisPresley.jpg', 'Elvis Presley - Elvis Presley', '50s', '', 'ElvisPresleyElvisPresley.mp3', '1956', NULL),
 (43, 'FrankSinatraComeFlywithMe.jpg', 'Frank Sinatra - Come Fly with Me', '50s', '', 'FrankSinatraComeFlywithMe.mp3', '1958', NULL),
 (44, 'GlennGouldBachTheGoldbergVariations.jpg', 'Glenn Gould - Bach: The Goldberg Variations', '50s', '', 'GlennGouldBachTheGoldbergVariations.mp3', '1956', NULL),
 (45, 'RayCharlesTheGeniusofRayCharles.jpg', 'Ray Charles - The Genius of Ray Charles', '50s', '', 'RayCharlesTheGeniusofRayCharles.mp3', '1959', NULL),
-(46, 'RogerWhitePiedPiper.jpg', 'Roger White - Pied Piper', '50s', '', 'RogerWhitePiedPiper.mp3', '1952', '1'),
+(46, 'RogerWhitePiedPiper.jpg', 'Roger White - Pied Piper', '50s', '', 'RogerWhiteThePiedPiper.mp3', '1952', '1'),
 (47, 'DannyKayeTubbytheTuba.jpg', 'Danny Kaye - Tubby the Tuba', '50s', '', 'DannyKayeTubbytheTuba.mp3', '1950', '1'),
-(48, 'TootsCamarataAndHisOrchestraBambi.jpg', 'Toots Camarata And His Orchestra - Bambi', '50s', '', 'TootsCamarataAndHisOrchestraBambi.mp3', '1957', '1'),
+(48, 'TootsCamarataAndHisOrchestraBambi.jpg', 'Toots Camarata And His Orchestra - Bambi', '50s', '', 'CamarataBambi.mp3', '1957', '1'),
 (49, 'HenryHallHushHushHushHereComesTheBogeyman.jpg', 'Henry Hall - Hush, Hush, Hush, Here Comes The Bogeyman', '50s', '', 'HenryHallHushHushHushHereComesTheBogeyman.mp3', '1950', '1'),
 (50, 'CyrilRitchardRideACockHorseAndOtherNurseryRhymes.jpg', 'Cyril Ritchard - Ride A Cock Horse And Other Nursery Rhymes', '50s', '', 'CyrilRitchardRideACockHorseAndOtherNurseryRhymes.mp3', '1958', '1');
 
@@ -1141,38 +1141,38 @@ CREATE TABLE IF NOT EXISTS `tbl_tvshows` (
   `tvshows_release` varchar(125) NOT NULL DEFAULT '19',
   `kids` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`tvshows_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_tvshows`
 --
 
 INSERT INTO `tbl_tvshows` (`tvshows_id`, `tvshows_cover`, `tvshows_title`, `tvshows_era`, `tvshows_storyline`, `tvshows_trailer`, `tvshows_release`, `kids`) VALUES
-(1, 'FreshPrinceofBelAir.jpg', 'Fresh Prince of Bel-Air', '90s', 'The Fresh Prince of Bel-Air was a 90s African-American sitcom that starred Will Smith as a teenager from a tough neighborhood in West Philadelphia, whose mother sends him to live with their wealthy relatives', 'FreshPrinceofBelAir.mp4', '1990', NULL),
+(1, 'TheFreshPrinceOfBelAir.jpg', 'Fresh Prince of Bel-Air', '90s', 'The Fresh Prince of Bel-Air was a 90s African-American sitcom that starred Will Smith as a teenager from a tough neighborhood in West Philadelphia, whose mother sends him to live with their wealthy relatives', 'TheFreshPrinceOfBelAir.mp4', '1990', NULL),
 (2, 'Friends.jpg', 'Friends', '90s', 'Friends is a 90\'s Comedy TV show, based in Manhattan, about 6 friends who go through just about every life experience imaginable together; love, marriage, divorce, children, heartbreaks, fights, new jobs and job losses and all sorts of drama.', 'Friends.mp4', '1994', NULL),
 (3, 'BuffytheVampireSlayer.jpg', 'Buffy the Vampire Slayer', '90s', 'A young woman, destined to slay vampires, demons and other infernal creatures, deals with her life fighting evil, with the help of her friends.', 'BuffytheVampireSlayer.mp4', '1997', NULL),
 (4, 'Frasier.jpg', 'Frasier', '90s', 'Dr. Frasier Crane moves back to his hometown of Seattle, where he lives with his father, and works as a radio psychiatrist.', 'Frasier.mp4', '1993', NULL),
-(5, 'TheXFiles.jpg', 'The X-Files', '90s', 'Two F.B.I. Agents, Fox Mulder the believer and Dana Scully the skeptic, investigate the strange and unexplained, while hidden forces work to impede their efforts.', 'TheXFiles.mp4', '1993', NULL),
+(5, 'TheX-Files.jpg', 'The X-Files', '90s', 'Two F.B.I. Agents, Fox Mulder the believer and Dana Scully the skeptic, investigate the strange and unexplained, while hidden forces work to impede their efforts.', 'TheX-Files.mp4', '1993', NULL),
 (6, 'Rugrats.jpg', 'Rugrats', '90s', 'The cartoon misadventures of four babies and their snotty older cousin as they face the things in life they don\'t understand.', 'Rugrats.mp4', '1990', '1'),
 (7, 'Doug.jpg', 'Doug', '90s', 'The life of a young boy as he meets friends, falls in love, maneuvers his way through grade 6 and writes all about it in his journal.', 'Doug.mp4', '1991', '1'),
-(8, 'TheAdventuresofPete&Pete.jpg', 'The Adventures of Pete & Pete', '90s', 'This delightfully quirky show looks at the lives and adventures of two red-headed brothers with the same name.', 'TheAdventuresofPete&Pete.mp4', '1994', '1'),
-(9, 'HeyArnold.jpg', 'Hey Arnold', '90s', 'The everyday life of Arnold, a fourth-grader in a nameless city that resembles Brooklyn, New York, who lives in a multi-racial boarding house with his grandparents and a motley assortment of friends and neighbors.', 'HeyArnold.mp4', '1996', '1'),
+(8, 'TheAdventuresOfPeteAndPete.jpg', 'The Adventures of Pete & Pete', '90s', 'This delightfully quirky show looks at the lives and adventures of two red-headed brothers with the same name.', 'TheAdventuresOfPeteAndPete.mp4', '1994', '1'),
+(9, 'HeyArnold!.jpg', 'Hey Arnold', '90s', 'The everyday life of Arnold, a fourth-grader in a nameless city that resembles Brooklyn, New York, who lives in a multi-racial boarding house with his grandparents and a motley assortment of friends and neighbors.', 'HeyArnold!.mp4', '1996', '1'),
 (10, 'LegendsoftheHiddenTemple.jpg', 'Legends of the Hidden Temple', '90s', 'Teams compete in elimination challenges with the final team going on to search for the treasure inside the titular Mesoamerican \"Hidden Temple\".', 'LegendsoftheHiddenTemple.mp4', '1993', '1'),
 (11, 'Cheers.jpg', 'Cheers', '80s', 'The regulars of the Boston bar \"Cheers\" share their experiences and lives with each other while drinking or working at the bar where everybody knows your name.', 'Cheers.mp4', '1982', NULL),
 (12, 'MacGyver.jpg', 'MacGyver', '80s', 'The adventures of a secret Agent armed with almost infinite scientific resourcefulness.', 'MacGyver.mp4', '1985', NULL),
 (13, 'MarriedWithChildren.jpg', 'Married... With Children', '80s', 'Al Bundy is a misanthropic women\'s shoe salesman with a miserable life. He hates his job, his wife is lazy, his son is dysfunctional (especially with women), and his daughter is dim-witted and promiscuous.', 'MarriedWithChildren.mp4', '1987', NULL),
 (14, 'KnightRider.jpg', 'Knight Rider', '80s', 'A lone crimefighter battles the forces of evil with the help of a virtually indestructible and artificially intelligent supercar.', 'KnightRider.mp4', '1982', NULL),
 (15, 'StarTrekTheNextGeneration.jpg', 'Star Trek: The Next Generation', '80s', 'Set almost 100 years after Captain Kirk\'s five-year mission, a new generation of Starfleet officers set off in the U.S.S. Enterprise-D on their own mission to go where no one has gone before.', 'StarTrekTheNextGeneration.mp4', '1987', NULL),
-(16, 'DoubleDare.jpg', 'Double Dare', '80s', 'One in a long-running series of game shows, where two-member teams of children compete to answer questions and complete stunts.', 'DoubleDare.mp4', '1986', '1'),
+(16, 'DoubleDareHome.jpg', 'Double Dare', '80s', 'One in a long-running series of game shows, where two-member teams of children compete to answer questions and complete stunts.', 'DoubleDareHome.mp4', '1986', '1'),
 (17, 'Alf.jpg', 'Alf', '80s', 'A furry alien wiseguy comes to live with the Tanner family after crashing into their garage.', 'Alf.mp4', '1986', '1'),
 (18, 'InspectorGadget.jpg', 'Inspector Gadget', '80s', 'A bumbling bionic police inspector stumbles about on his cases, while his niece and dog secretly do the real investigative work.', 'InspectorGadget.mp4', '1983', '1'),
 (19, 'ThunderCats.jpg', 'ThunderCats', '80s', 'A team of humanoid cats fight evil in their adopted home world.', 'ThunderCats.mp4', '1985', '1'),
-(20, 'HeMan.jpg', 'He-Man', '80s', 'The most powerful man in the universe, He-Man, goes against the evil forces of Skeletor to save the planet Eternia and to protect the secrets of Castle Grayskull.', 'HeMan.jpg', '1983', '1'),
-(21, 'WonderWoman.jpg', 'Wonder Woman', '70s', 'The adventures of the greatest of the female superheroes.', 'WonderWoman.jpg', '1975', NULL),
-(22, 'UFO.jpg.jpg', 'UFO', '70s', 'The missions of the Supreme Headquarters Alien Defence Organization, which defends Earth from extra-terrestrial threats.', 'UFO.mp4', '1970', NULL),
+(20, 'HeMan.mp4.jpg', 'He-Man', '80s', 'The most powerful man in the universe, He-Man, goes against the evil forces of Skeletor to save the planet Eternia and to protect the secrets of Castle Grayskull.', 'HeMan.mp4', '1983', '1'),
+(21, 'WonderWoman.jpg', 'Wonder Woman', '70s', 'The adventures of the greatest of the female superheroes.', 'WonderWoman.mp4', '1975', NULL),
+(22, 'UFO.jpg', 'UFO', '70s', 'The missions of the Supreme Headquarters Alien Defence Organization, which defends Earth from extra-terrestrial threats.', 'UFO.mp4', '1970', NULL),
 (23, 'ThePartridgeFamily.jpg', 'The Partridge Family', '70s', 'The humorous adventures of a family of pop musicians.', 'ThePartridgeFamily.mp4', '1970', NULL),
 (24, 'TheMuppetShow.jpg', 'The Muppets Show', '70s', 'Kermit the Frog and his fellow Muppets put on a vaudeville show at their theatre, bringing in a famous celebrity to help out for each episode.', 'TheMuppetShow.mp4', '1974', '1'),
-(25, 'BattlestarGalactica,jpg', 'Battlestar Galactica', '70s', 'After the destruction of the Twelve Colonies of Mankind, the last major fighter carrier leads a makeshift fugitive fleet in a desperate search for the legendary planet Earth.', 'BattlestarGalactica.mp4', '1979', NULL),
+(25, 'BattlestarGalactica.jpg', 'Battlestar Galactica', '70s', 'After the destruction of the Twelve Colonies of Mankind, the last major fighter carrier leads a makeshift fugitive fleet in a desperate search for the legendary planet Earth.', 'BattlestarGalactica.mp4', '1979', NULL),
 (26, 'LittleHouseOnThePrairie.jpg', 'Little House on the Prairie', '70s', 'The life and adventures of the Ingalls family in the nineteenth century American Midwest.', 'LittleHouseOnThePrairie.mp4', '1974', NULL),
 (27, 'SuperFriends.jpg', 'Super Friends', '70s', 'The greatest of the DC Comics superheroes work together to uphold the good with the help of some young proteges.', 'SuperFriends.mp4', '1973', '1'),
 (28, 'TheManyAdventuresOfWinnieThePooh.jpg', 'The Many Adventures of Winnie the Pooh', '70s', 'In this collection of animated shorts based on the stories and characters by A.A. Milne, Winnie the Pooh, a honey-loving teddy bear, embarks on some eccentric adventures.', 'TheManyAdventuresOfWinnieThePooh.mp4', '1977', '1'),
@@ -1183,7 +1183,6 @@ INSERT INTO `tbl_tvshows` (`tvshows_id`, `tvshows_cover`, `tvshows_title`, `tvsh
 (33, 'TheAddamsFamily.jpg', 'The Addams Family', '60s', 'The misadventures of a blissfully macabre but extremely loving family.', 'TheAddamsFamily.mp4', '1964', NULL),
 (34, 'LostinSpace.jpg', 'Lost in Space', '60s', 'A space colony family struggles to survive when a spy/accidental stowaway throws their ship hopelessly off course.', 'LostinSpace.mp4', '1965', NULL),
 (35, 'ThatGirl.jpg', 'That Girl', '60s', 'An aspiring actress moves from her hometown of Brewster, New York, to try to make it big in New York City, having to take several offbeat \"temp\" jobs to support herself in between her various auditions and bit parts.', 'ThatGirl.mp4', '1966', NULL),
-(36, 'Batman.jpg', 'Batman', '60s', 'The series focuses on Batman and Robin as they defend Gotham City from its various criminals.', 'Batman.mp4', '1966', '1'),
 (37, 'Birdman.jpg', 'Birdman', '60s', 'A winged superhero who gets his powers from the sun battles various evildoers with the help of his eagle sidekick Avenger.', 'Birdman.mp4', '1967', '1'),
 (38, 'WackyRaces.jpg', 'Wacky Races', '60s', 'The participants of an unusual car race compete around America.', 'WackyRaces.mp4', '1968', '1'),
 (39, 'SpaceGhost.jpg', 'Space Ghost', '60s', 'The adventures of a space superhero who can become invisible and his sidekicks.', 'SpaceGhost.mp4', '1966', '1'),
@@ -1196,8 +1195,9 @@ INSERT INTO `tbl_tvshows` (`tvshows_id`, `tvshows_cover`, `tvshows_title`, `tvsh
 (46, 'Lassie.jpg', 'Lassie', '50s', 'The ongoing saga of the Martin family and their beloved collie, Lassie.', 'Lassie.mp4', '1954', '1'),
 (47, 'RockyandBullwinkle.jpg', 'The Rocky and Bullwinkle Show', '50s', 'Rocky, a plucky flying squirrel and Bullwinkle, a bumbling but lovable moose, have a series of ongoing adventures.', 'RockyandBullwinkle.mp4', '1959', '1'),
 (48, 'MickeyMouseClub.jpg', 'The Mickey Mouse Club', '50s', 'Mickey Mouse hosts a youth-oriented variety show.', 'MickeyMouseClub.mp4', '1955', '1'),
-(49, 'TheRuffReddyShow.jpg', 'The Ruff & Reddy Show', '50s', 'The adventures of Ruff, a smart and steadfast cat, and Reddy, a good-hearted and brave but not a very bright dog.', 'TheRuffReddyShow.jpg', '1957', '1'),
-(50, 'FelixtheCat.jpg', 'Felix the Cat', '50s', 'The complete 1958-1959 full-color series!', 'FelixtheCat.mp4', '1958', '1');
+(49, 'TheRuffReddyShow.jpg', 'The Ruff & Reddy Show', '50s', 'The adventures of Ruff, a smart and steadfast cat, and Reddy, a good-hearted and brave but not a very bright dog.', 'TheRuffReddyShow.mp4', '1957', '1'),
+(50, 'FelixtheCat.jpg', 'Felix the Cat', '50s', 'The complete 1958-1959 full-color series!', 'FelixtheCat.mp4', '1958', '1'),
+(51, 'BatmanShow.jpg', 'Batman', '60s', 'The series focuses on Batman and Robin as they defend Gotham City from its various criminals.\r\n', 'Batman.mp4', '1966', '1');
 
 -- --------------------------------------------------------
 
